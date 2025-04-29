@@ -1,0 +1,15 @@
+.page-layout {
+	display: grid;
+	grid-template-columns: max-content 1fr;
+	height: 100%;
+	overflow: hidden;
+}
+
+#page-sidebar {
+	height: 100%;
+}
+
+#page-body {
+	height: 100%;
+	overflow: hidden;
+}
