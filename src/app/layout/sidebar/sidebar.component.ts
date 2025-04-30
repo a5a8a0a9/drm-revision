@@ -3,6 +3,7 @@ import { Component, DestroyRef } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { HamburgerComponent } from '../hamburger/hamburger.component';
 import { LayoutService } from '../layout.service';
+import { documentLst, groupList, projectList } from './mock.const';
 
 @Component({
 	selector: 'yee-sidebar',
@@ -13,6 +14,10 @@ import { LayoutService } from '../layout.service';
 })
 export class SidebarComponent {
 	isOpen = false;
+
+	groupList = groupList;
+	projectList = projectList;
+	documentLst = documentLst;
 
 	constructor(private layoutService: LayoutService, private destroyRef: DestroyRef) {}
 

@@ -1,0 +1,29 @@
+.menu {
+	border: 1px solid $color-border;
+	border-width: 0 0 1px 1px;
+
+	&-item {
+		padding: 8px;
+		cursor: pointer;
+		user-select: none;
+		list-style: none;
+
+		&:not(:last-child) {
+			border-bottom: 1px solid $color-border;
+		}
+
+		&:hover {
+			background-color: $color-hover;
+		}
+	}
+
+	&-header {
+		display: grid;
+		grid-template-columns: max-content 1fr;
+	}
+
+	&-icon {
+		width: 24px;
+		text-align: center;
+	}
+}

@@ -1,7 +1,7 @@
 .yee-sidebar {
 	display: grid;
 	background: $color-bg-light;
-	border: 1px solid $color-border;
+	border-right: 1px solid $color-border;
 	overflow: hidden;
 	grid-template-rows: max-content 1fr;
 	width: 50px;
@@ -9,12 +9,14 @@
 	transition: width 0.3s;
 
 	&.active {
-		width: 200px;
+		width: 300px;
 	}
 
 	&-header {
+		background: $color-accent;
 	}
 
 	&-body {
+		overflow: auto;
 	}
 }
