@@ -1,0 +1,22 @@
+/// 基礎背景色（避免純白）
+$color-bg-lightest: #f7f8f9; // 最淺底色，用於 body
+$color-bg-light: #eef0f2; // 次淺底色，用於卡片、面板
+$color-bg-muted: #e4e7eb; // 中性色背景，用於列表或表格條紋
+
+/// 邊框與分隔線
+$color-border: #ccd1d5; // 一般邊框、分隔線
+
+/// 文字色
+$color-text-primary: #2c333a; // 主要文字
+$color-text-secondary: #50575e; // 次要文字
+$color-text-placeholder: #7a828a; // 輸入框 placeholder 或不可點文字
+
+/// 強調與互動
+$color-accent: #a3b1c7; // 主要按鈕、連結顏色
+$color-hover: #d1d6dd; // 滑鼠停留背景
+$color-active: #bac2cb; // 按下/選取背景
+
+/// 狀態色（可依需求調整）
+$color-success: #88b04b;
+$color-warning: #e5a00d;
+$color-error: #d6454a;

@@ -1,0 +1,30 @@
+.hamburger {
+	width: 30px;
+	height: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+
+	&-indicator {
+		display: block;
+		height: 2px;
+		background-color: $color-text-primary;
+		border-radius: 2px;
+		transition: transform 0.3s ease, opacity 0.3s ease;
+	}
+
+	&.open {
+		.hamburger-indicator:nth-child(1) {
+			transform: translateY(9px) rotate(45deg);
+		}
+
+		.hamburger-indicator:nth-child(2) {
+			opacity: 0;
+		}
+
+		.hamburger-indicator:nth-child(3) {
+			transform: translateY(-9px) rotate(-45deg);
+		}
+	}
+}
