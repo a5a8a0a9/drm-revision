@@ -1,0 +1,21 @@
+scss
+/* src/app/rule/rule.component.scss */
+.rule-container {
+  width: 100%;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+
+  h2 {
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  .rule-content {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 3px;
+  }
+}

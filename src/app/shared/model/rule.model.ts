@@ -1,6 +1,10 @@
 import { RuleStatus, RuleType } from '../enum';
 
 export interface Rule {
+	id: string;
+	groupId: string;
+	projectId: string;
+	documentId: string;
 	name: string;
 	type: RuleType;
 	status: RuleStatus;
