@@ -1,0 +1,19 @@
+<div #tableContainer class="table-container">
+	<table>
+		<thead>
+			<tr>
+				<th *ngFor="let col of columns; let columnIndex = index" [style.width.px]="col.width">
+					<span>{{ col.header }}</span>
+					<div class="resize-handle" (mousedown)="onResizeMouseDown($event, columnIndex)"></div>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let row of data">
+				<td *ngFor="let col of columns" [style.width.px]="col.width">
+					{{ row[col.field] }}
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
