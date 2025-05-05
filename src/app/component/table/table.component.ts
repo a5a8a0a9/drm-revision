@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, Input, Renderer2, ViewChild } from '@angular/core';
+import { Component, ContentChild, ElementRef, Input, Renderer2, TemplateRef, ViewChild } from '@angular/core';
 
 @Component({
 	selector: 'yee-table',
@@ -9,10 +9,15 @@ import { Component, ElementRef, Input, Renderer2, ViewChild } from '@angular/cor
 	styleUrls: ['./table.component.scss'],
 })
 export class TableComponent {
-	@Input() columns: { field: string; header: string; width: number }[] = [];
 	@Input() data: any[] = [];
+	@Input() columns: { field: string; header: string; width: number }[] = [];
 
 	@ViewChild('tableContainer') tableContainer!: ElementRef;
+
+	// 自訂模板
+	@ContentChild('header', { read: TemplateRef }) headerTpl!: TemplateRef<any>;
+	@ContentChild('row', { read: TemplateRef }) rowTpl!: TemplateRef<any>;
+	@ContentChild('noData', { read: TemplateRef }) noDataTpl!: TemplateRef<any>;
 
 	private startX: number = 0;
 	private startWidth: number = 0;

@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TableComponent } from '@component';
@@ -5,7 +6,7 @@ import { TableComponent } from '@component';
 @Component({
 	selector: 'yee-rule',
 	standalone: true,
-	imports: [TableComponent],
+	imports: [CommonModule, TableComponent],
 	templateUrl: './rule.component.html',
 	styleUrls: ['./rule.component.scss'],
 })
@@ -20,9 +21,13 @@ export class RuleComponent implements OnInit {
 	];
 
 	tableColumnList = [
-		{ field: 'name', header: '姓名', width: 150 },
-		{ field: 'email', header: '信箱', width: 300 },
-		{ field: 'role', header: '角色', width: 200 },
+		{ field: 'name', header: 'name', width: 150 },
+		{ field: 'type', header: 'type', width: 150 },
+		{ field: 'status', header: 'status', width: 150 },
+		{ field: 'ownerId', header: 'ownerId', width: 200 },
+		{ field: 'hasQa', header: 'hasQa', width: 100 },
+		{ field: 'qaUserId', header: 'qaUserId', width: 200 },
+		{ field: 'secondaryOwnerId', header: 'secondaryOwnerId', width: 200 },
 	];
 
 	constructor(private route: ActivatedRoute) {}

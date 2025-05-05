@@ -1,19 +1,22 @@
 <div #tableContainer class="table-container">
 	<table>
 		<thead>
-			<tr>
-				<th *ngFor="let col of columns; let columnIndex = index" [style.width.px]="col.width">
-					<span>{{ col.header }}</span>
-					<div class="resize-handle" (mousedown)="onResizeMouseDown($event, columnIndex)"></div>
-				</th>
-			</tr>
+			<!-- 使用者自訂的 header 模板 -->
+			<ng-container *ngTemplateOutlet="headerTpl; context: { columns: columns }"></ng-container>
 		</thead>
+
 		<tbody>
-			<tr *ngFor="let row of data">
-				<td *ngFor="let col of columns" [style.width.px]="col.width">
-					{{ row[col.field] }}
-				</td>
-			</tr>
+			<!-- 若有資料，依據 row 模板渲染每筆 -->
+			<ng-container *ngIf="data?.length; else emptyBlock">
+				<ng-container *ngFor="let row of data">
+					<ng-container *ngTemplateOutlet="rowTpl; context: { row: row, columns: columns }"></ng-container>
+				</ng-container>
+			</ng-container>
+
+			<!-- 空資料狀態 -->
+			<ng-template #emptyBlock>
+				<ng-container *ngTemplateOutlet="noDataTpl; context: { columns: columns }"></ng-container>
+			</ng-template>
 		</tbody>
 	</table>
 </div>
