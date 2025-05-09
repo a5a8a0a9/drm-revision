@@ -1,20 +1,22 @@
-<div class="yee-sidebar" [class.active]="isOpen">
+<div class="sidebar" [class.active]="isOpen">
 	<div
-		class="yee-sidebar-header"
+		class="sidebar-header"
 		style="display: grid; grid-template-columns: max-content 1fr; align-items: center; border-bottom: 1px solid #ddd"
 	>
-		<div style="padding: 8px">
+		<div style="height: 100%; cursor: pointer; width: 48px; display: grid; place-items: center" (click)="toggle()">
 			<yee-hamburger></yee-hamburger>
 		</div>
 
-		<h1 *ngIf="isOpen" style="padding: 8px; font-weight: bold">Project</h1>
+		<h1 *ngIf="isOpen" style="height: 100%; align-content: center; padding: 8px; font-weight: bold">Project</h1>
 	</div>
 
-	<div class="yee-sidebar-body">
+	<div class="sidebar-body">
 		<details *ngFor="let group of groupList; let groupIndex = index" class="menu">
 			<summary class="menu-item">
 				<div class="menu-header">
-					<i class="menu-icon">&hearts;</i>
+					<span class="menu-icon">
+						<i>&hearts;</i>
+					</span>
 					<span *ngIf="isOpen" class="truncate">{{ group.name }}</span>
 				</div>
 			</summary>
@@ -23,7 +25,9 @@
 				<details *ngFor="let project of projectList; let projectIndex = index" class="menu">
 					<summary class="menu-item">
 						<div class="menu-header">
-							<i class="menu-icon">&diams;</i>
+							<span class="menu-icon">
+								<i>&diams;</i>
+							</span>
 							<span class="truncate">
 								{{ project.name + '(' + project.dueDate + ')' }}
 							</span>
@@ -38,7 +42,9 @@
 						<div *ngFor="let document of documentLst; let documentIndex = index" class="menu">
 							<div class="menu-item" (click)="selectDocument(group.id, project.id, document.id)">
 								<div class="menu-header">
-									<i class="menu-icon">&spades;</i>
+									<span class="menu-icon">
+										<i>&spades;</i>
+									</span>
 									<span class="truncate">
 										{{ document.name }}
 									</span>

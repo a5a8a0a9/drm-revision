@@ -1,6 +1,6 @@
-<div class="yee-tab-wrapper">
-	<div class="yee-tab-container">
-		<button class="scroll-btn left" (click)="scrollLeft()">&lt;</button>
+<div class="tab-wrapper">
+	<div class="tab-container">
+		<button class="tab-scroll-btn left" (click)="scrollLeft()">&lt;</button>
 
 		<div class="tab-scroll-area" #scrollContainer>
 			<div
@@ -22,10 +22,10 @@
 			</div>
 		</div>
 
-		<button class="scroll-btn right" (click)="scrollRight()">&gt;</button>
+		<button class="tab-scroll-btn right" (click)="scrollRight()">&gt;</button>
 	</div>
 
-	<div class="yee-tab-content">
+	<div class="tab-content">
 		<ng-content></ng-content>
 	</div>
 </div>
