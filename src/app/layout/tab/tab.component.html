@@ -1,10 +1,11 @@
 <div class="tab-container">
 	<ul class="tab-bar">
-		<li *ngFor="let tab of tabs; let i = index" class="tab-item" [class.active]="tab.selected" (click)="selectTab(i)">
+		<li *ngFor="let tab of tabs" class="tab-item" [class.active]="selectedId === tab.id" (click)="selectTab(tab.id)">
 			<span>{{ tab.title }}</span>
-			<span style="width: 16x">&times;</span>
+			<span class="tab-indicator"></span>
 		</li>
 	</ul>
+
 	<div class="tab-content">
 		<ng-content></ng-content>
 	</div>

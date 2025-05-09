@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { TableComponent } from '@component';
 
 @Component({
@@ -30,7 +29,7 @@ export class RuleComponent implements OnInit {
 		{ field: 'secondaryOwnerId', header: 'secondaryOwnerId', width: 200 },
 	];
 
-	constructor(private route: ActivatedRoute) {}
+	constructor() {}
 
 	ngOnInit(): void {}
 }

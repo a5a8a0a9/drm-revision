@@ -2,6 +2,8 @@
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
 
 .tab-bar {
@@ -10,30 +12,44 @@
 	margin: 0;
 	display: flex;
 	border-bottom: 1px solid #ccc;
+	overflow: auto hidden;
+	scrollbar-width: none;
 }
 
 .tab-item {
-	display: inline-flex;
-	align-items: center;
-	gap: 8px;
-	padding: 10px 15px;
+	padding: 8px 16px;
+	border: 1px solid #ddd;
+	border-bottom-width: 0;
+	border-radius: 4px 4px 0 0;
+	background-color: #fff;
 	cursor: pointer;
-	border: 1px solid transparent;
-	border-bottom: none;
-	background-color: #eee;
+	user-select: none;
+	position: relative;
+	transition: color 0.3s ease;
+
+	&.active,
+	&:hover {
+		color: #007bff;
+
+		.tab-indicator {
+			background-color: #007bff;
+		}
+	}
 }
 
-.tab-item.active {
-	background-color: #fff;
-	border: 1px solid #ccc;
-	border-bottom: none;
-	position: relative;
-	top: 1px;
+.tab-indicator {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: transparent;
+	transition: background-color 0.3s ease;
 }
 
 .tab-content {
-	padding: 10px;
-	border: 1px solid #ccc;
 	height: 100%;
+	overflow: auto;
 	background-color: #fff;
+	position: relative;
 }

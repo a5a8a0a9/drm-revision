@@ -4,9 +4,8 @@
 	</div>
 
 	<div id="page-body">
-		<yee-tab [tabs]="tabList">
-			<yee-rule></yee-rule>
-			<!-- <router-outlet></router-outlet> -->
+		<yee-tab [tabs]="tabList" [(selectedId)]="activeTabId">
+			<router-outlet></router-outlet>
 		</yee-tab>
 	</div>
 </div>

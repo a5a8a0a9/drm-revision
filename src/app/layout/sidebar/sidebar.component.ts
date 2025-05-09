@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, DestroyRef, EventEmitter, Output } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { Router } from '@angular/router';
 import { Document } from '../../shared/model';
 import { HamburgerComponent } from '../hamburger/hamburger.component';
 import { LayoutService } from '../layout.service';
@@ -22,7 +23,7 @@ export class SidebarComponent {
 
 	@Output() documentSelected = new EventEmitter<Document>();
 
-	constructor(private layoutService: LayoutService, private destroyRef: DestroyRef) {}
+	constructor(private layoutService: LayoutService, private destroyRef: DestroyRef, private router: Router) {}
 
 	ngOnInit(): void {
 		this.layoutService.menuOpen$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(isOpen => {
@@ -35,6 +36,6 @@ export class SidebarComponent {
 	}
 
 	selectDocument(groupId: string, projectId: string, documentId: string) {
-		console.log(groupId, projectId, documentId);
+		this.router.navigate([groupId, projectId, documentId]);
 	}
 }

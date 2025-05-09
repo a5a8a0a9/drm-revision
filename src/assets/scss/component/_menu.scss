@@ -1,6 +1,6 @@
 .menu {
-	border: 1px solid $color-border;
-	border-width: 0 0 1px 1px;
+	// border: 1px solid $color-border;
+	// border-width: 0 0 1px 1px;
 
 	&-item {
 		padding: 8px;
@@ -8,9 +8,9 @@
 		user-select: none;
 		list-style: none;
 
-		&:not(:last-child) {
-			border-bottom: 1px solid $color-border;
-		}
+		// &:not(:last-child) {
+		// 	border-bottom: 1px solid $color-border;
+		// }
 
 		&:hover {
 			background-color: $color-hover;

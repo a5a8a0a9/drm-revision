@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, Output } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Tab } from '@shared/model';
 
@@ -10,12 +10,21 @@ import { Tab } from '@shared/model';
 	templateUrl: './tab.component.html',
 	styleUrls: ['./tab.component.scss'],
 })
-export class TabComponent {
+export class TabComponent implements AfterViewInit {
 	@Input() tabs: Tab[] = [];
 
-	selectTab(index: number) {
-		this.tabs.forEach((tab, i) => {
-			tab.selected = i === index;
-		});
+	@Input() selectedId: any = null;
+	@Output() selectedIdChange = new EventEmitter<any>();
+
+	ngAfterViewInit(): void {
+		if (this.selectedId) {
+			this.selectTab(this.selectedId);
+		} else if (this.tabs.length > 0) {
+			this.selectTab(this.tabs[0].id);
+		}
+	}
+
+	selectTab(id: any) {
+		this.selectedIdChange.emit(id);
 	}
 }
