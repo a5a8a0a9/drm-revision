@@ -1,0 +1,71 @@
+.table-container {
+	overflow: auto;
+	position: relative;
+	// border: 1px solid $color-border;
+	// border-radius: 4px;
+	height: 100%;
+	background: $color-bg-lightest;
+}
+
+table {
+	width: max-content;
+	position: relative;
+	border-collapse: separate;
+	border-spacing: 0;
+
+	thead {
+		position: sticky;
+		top: 0;
+		z-index: 1;
+
+		tr > th {
+			border-bottom: 1px solid $color-border;
+			border-right: 1px solid $color-border;
+			&:last-child {
+				border-right: none;
+			}
+		}
+	}
+
+	tbody {
+		tr > td {
+			border-bottom: 1px solid $color-border;
+
+			border-right: 1px solid $color-border;
+			&:last-child {
+				border-right: none;
+			}
+		}
+
+		tr:last-child > td {
+			border-bottom: none;
+		}
+	}
+
+	th,
+	td {
+		position: relative;
+		padding: 8px;
+		white-space: nowrap;
+	}
+
+	th,
+	td {
+		background: #fff;
+	}
+
+	.resize-handle {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 5px;
+		height: 100%;
+		cursor: col-resize;
+		user-select: none;
+	}
+}
+
+body.resizing {
+	cursor: col-resize;
+	user-select: none;
+}

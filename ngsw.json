@@ -1,0 +1,109 @@
+{
+  "configVersion": 1,
+  "timestamp": 1746797217087,
+  "index": "/drm-revision/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/drm-revision/259.b62b4c0ac0af8509.js",
+        "/drm-revision/favicon.ico",
+        "/drm-revision/index.html",
+        "/drm-revision/main.9b40adaccf31ee45.js",
+        "/drm-revision/manifest.webmanifest",
+        "/drm-revision/polyfills.cbf95f4c725f9299.js",
+        "/drm-revision/runtime.a1bc3fec565909b8.js",
+        "/drm-revision/styles.8f7c1228ece7ce4c.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/drm-revision/assets/icons/icon-128x128.png",
+        "/drm-revision/assets/icons/icon-144x144.png",
+        "/drm-revision/assets/icons/icon-152x152.png",
+        "/drm-revision/assets/icons/icon-192x192.png",
+        "/drm-revision/assets/icons/icon-384x384.png",
+        "/drm-revision/assets/icons/icon-512x512.png",
+        "/drm-revision/assets/icons/icon-72x72.png",
+        "/drm-revision/assets/icons/icon-96x96.png",
+        "/drm-revision/assets/scss/_component.scss",
+        "/drm-revision/assets/scss/_helper.scss",
+        "/drm-revision/assets/scss/_layout.scss",
+        "/drm-revision/assets/scss/_reboot.scss",
+        "/drm-revision/assets/scss/_reset.scss",
+        "/drm-revision/assets/scss/_variable.scss",
+        "/drm-revision/assets/scss/component/_menu.scss",
+        "/drm-revision/assets/scss/component/_tab.scss",
+        "/drm-revision/assets/scss/component/_table.scss",
+        "/drm-revision/assets/scss/layout/_hamburger.scss",
+        "/drm-revision/assets/scss/layout/_page.scss",
+        "/drm-revision/assets/scss/layout/_sidebar.scss",
+        "/drm-revision/assets/scss/theme.scss"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/drm-revision/259.b62b4c0ac0af8509.js": "5c29bfd942686606a1814245bfe109216717c4d8",
+    "/drm-revision/assets/icons/icon-128x128.png": "b1f06c7d714abb4a0cc4d1f7c954feb26826e4c4",
+    "/drm-revision/assets/icons/icon-144x144.png": "96a0d629765c1bc85d9263c6bc83094ca776d267",
+    "/drm-revision/assets/icons/icon-152x152.png": "b1fbbee3902eb96a7658e3bb006f31f78ca5a44c",
+    "/drm-revision/assets/icons/icon-192x192.png": "e4211163bf0911688fbfb80278d8ff4d2f77691d",
+    "/drm-revision/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/drm-revision/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/drm-revision/assets/icons/icon-72x72.png": "279825a1ac4377032ae996a1832c641e33ccf1b6",
+    "/drm-revision/assets/icons/icon-96x96.png": "592885efcbfee27e5e20be4fa3043589390d2740",
+    "/drm-revision/assets/scss/_component.scss": "cabe43e37bfd97f0e04437ccd52428bc365cf512",
+    "/drm-revision/assets/scss/_helper.scss": "7ac87c024f3330433a4848a4e80abdbeb5c04a0d",
+    "/drm-revision/assets/scss/_layout.scss": "9bc38d6d9c744449eed608a3f965b0240bda4437",
+    "/drm-revision/assets/scss/_reboot.scss": "8d235458ad6c0af287cb746f37f8dfa1a8f33688",
+    "/drm-revision/assets/scss/_reset.scss": "973d05d514254ba842c5c586632b8851a01e7148",
+    "/drm-revision/assets/scss/_variable.scss": "c700fe91e044938fbc92019fcf7aa32a5125b166",
+    "/drm-revision/assets/scss/component/_menu.scss": "c1ae8f64882b94f39b1831202970217a4eef05f3",
+    "/drm-revision/assets/scss/component/_tab.scss": "a6ba5caf976d74ce7c9ec1a8c13fbde8a6da8388",
+    "/drm-revision/assets/scss/component/_table.scss": "9a3d6a6a3a07a71ecbb61131dde3b930e1eb343b",
+    "/drm-revision/assets/scss/layout/_hamburger.scss": "ecf5d4c5ed0625770edbe81259d714c35d879182",
+    "/drm-revision/assets/scss/layout/_page.scss": "0d190af848ce8e61d99675fc49ca3d3a47387cb3",
+    "/drm-revision/assets/scss/layout/_sidebar.scss": "99793f3e6a373cc8af6657571ecb2f8bc1038078",
+    "/drm-revision/assets/scss/theme.scss": "52be2e107681eb7b2978792f6ae00582624e3d2f",
+    "/drm-revision/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/drm-revision/index.html": "42cb44e877e58dcb5e9ab0dea5b32d0d7595d49c",
+    "/drm-revision/main.9b40adaccf31ee45.js": "8686282b04ab37ffbfb2eb1a480ca7e7ebda60d6",
+    "/drm-revision/manifest.webmanifest": "f28e1b89d30c34342b09cdf14ad3b52c96408898",
+    "/drm-revision/polyfills.cbf95f4c725f9299.js": "4fc5fe60c584d2a56506d557f59c97adf9785b80",
+    "/drm-revision/runtime.a1bc3fec565909b8.js": "119cb5d9dd90fd2bf5e7a9223184c9d4c5a55406",
+    "/drm-revision/styles.8f7c1228ece7ce4c.css": "7a184f896b3bcea77db45a77adb4ee7e36c90890"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
