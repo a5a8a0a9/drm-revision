@@ -1,14 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Rule } from '@api/model';
-import { TableComponent } from '@component';
+import { ResizableColumnDirective, TableComponent } from '@component';
 import { COLUMN_LIST } from './column.const';
 import { MOCK_RULE_LIST } from './mock.const';
 
 @Component({
 	selector: 'yee-rule',
 	standalone: true,
-	imports: [CommonModule, TableComponent],
+	imports: [CommonModule, TableComponent, ResizableColumnDirective],
 	templateUrl: './rule.component.html',
 	styleUrls: ['./rule.component.scss'],
 })

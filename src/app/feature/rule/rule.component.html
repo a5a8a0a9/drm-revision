@@ -9,7 +9,7 @@
 		<yee-table [data]="tableData" [columns]="tableColumnList" style="height: 100%">
 			<ng-template #header let-columns="columns">
 				<tr>
-					<th *ngFor="let col of columns; let i = index" [style.width.px]="col.width">
+					<th *ngFor="let col of columns; let i = index" [style.width.px]="col.width" yeeResizableColumn [column]="col">
 						{{ col.header }}
 						<div class="resize-handle"></div>
 					</th>
