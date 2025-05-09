@@ -1,6 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { TableComponent } from '@component';
+import { Rule } from '@shared/model';
+import { COLUMN_LIST } from './column.const';
+import { MOCK_RULE_LIST } from './mock.const';
 
 @Component({
 	selector: 'yee-rule',
@@ -14,20 +17,8 @@ export class RuleComponent implements OnInit {
 	projectId: string = '';
 	documentId: string = '';
 
-	tableData = [
-		{ name: 'Alice', email: 'alice@mail.com', role: 'Admin' },
-		{ name: 'Bob', email: 'bob@mail.com', role: 'User' },
-	];
-
-	tableColumnList = [
-		{ field: 'name', header: 'name', width: 150 },
-		{ field: 'type', header: 'type', width: 150 },
-		{ field: 'status', header: 'status', width: 150 },
-		{ field: 'ownerId', header: 'ownerId', width: 200 },
-		{ field: 'hasQa', header: 'hasQa', width: 100 },
-		{ field: 'qaUserId', header: 'qaUserId', width: 200 },
-		{ field: 'secondaryOwnerId', header: 'secondaryOwnerId', width: 200 },
-	];
+	tableData: Rule[] = MOCK_RULE_LIST;
+	tableColumnList = COLUMN_LIST;
 
 	constructor() {}
 
