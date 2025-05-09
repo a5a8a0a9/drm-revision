@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
+import { TabItem } from '@api/model';
 import { TabComponent } from '@component';
 import { SidebarComponent } from '@layout';
-import { TabItem } from '@shared/model';
 
 @Component({
 	selector: 'yee-root',

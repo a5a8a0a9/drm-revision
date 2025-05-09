@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { TabItem } from '@shared/model';
+import { TabItem } from '@api/model';
 
 @Component({
 	selector: 'yee-tab',

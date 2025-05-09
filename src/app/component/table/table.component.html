@@ -1,19 +1,16 @@
 <div #tableContainer class="table-container">
 	<table>
 		<thead>
-			<!-- 使用者自訂的 header 模板 -->
 			<ng-container *ngTemplateOutlet="headerTpl; context: { columns: columns }"></ng-container>
 		</thead>
 
 		<tbody>
-			<!-- 若有資料，依據 row 模板渲染每筆 -->
 			<ng-container *ngIf="data?.length; else emptyBlock">
 				<ng-container *ngFor="let row of data">
 					<ng-container *ngTemplateOutlet="rowTpl; context: { row: row, columns: columns }"></ng-container>
 				</ng-container>
 			</ng-container>
 
-			<!-- 空資料狀態 -->
 			<ng-template #emptyBlock>
 				<ng-container *ngTemplateOutlet="noDataTpl; context: { columns: columns }"></ng-container>
 			</ng-template>

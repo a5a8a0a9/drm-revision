@@ -20,8 +20,4 @@ export class HamburgerComponent implements OnInit {
 			this.isOpen = isOpen;
 		});
 	}
-
-	toggle() {
-		this.layoutService.toggleMenu();
-	}
 }

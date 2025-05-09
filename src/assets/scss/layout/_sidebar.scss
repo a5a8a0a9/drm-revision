@@ -1,10 +1,10 @@
-.yee-sidebar {
+.sidebar {
 	display: grid;
 	background: #fff;
 	border-right: 1px solid $color-border;
 	overflow: hidden;
 	grid-template-rows: max-content 1fr;
-	width: 50px;
+	width: 48px;
 	height: 100%;
 	transition: width 0.3s;
 
@@ -13,6 +13,7 @@
 	}
 
 	&-header {
+		height: 48px;
 	}
 
 	&-body {

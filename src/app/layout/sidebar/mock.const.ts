@@ -1,5 +1,4 @@
-import { RuleStatus, RuleType } from '@shared/enum';
-import { Document, Group, Project, Rule } from '@shared/model';
+import { Document, Group, Project } from '@api/model';
 
 export const groupList: Group[] = [
 	{
@@ -114,60 +113,5 @@ export const documentLst: Document[] = [
 		dueDate: '2023-10-05',
 		progress: 80,
 		status: '',
-	},
-];
-
-export const ruleList: Rule[] = [
-	{
-		id: 'R01',
-		name: 'Rule 1',
-		type: RuleType.NEW,
-		status: RuleStatus.DOING,
-		ownerId: 'Owner_1',
-		hasQa: true,
-		qaUserId: 'QA User 1',
-		secondaryOwnerId: 'Secondary Owner 1',
-		projectId: 'P01',
-		groupId: 'G01',
-		documentId: 'D01',
-	},
-	{
-		id: 'R02',
-		name: 'Rule 2',
-		type: RuleType.MODIFIED,
-		status: RuleStatus.DOING,
-		ownerId: 'Owner 1',
-		hasQa: true,
-		qaUserId: 'QA User 1',
-		secondaryOwnerId: 'Secondary Owner 1',
-		projectId: 'P02',
-		groupId: 'G02',
-		documentId: 'D02',
-	},
-	{
-		id: 'R03',
-		name: 'Rule 3',
-		type: RuleType.MODIFIED,
-		status: RuleStatus.DOING,
-		ownerId: 'Owner 1',
-		hasQa: true,
-		qaUserId: 'QA User 1',
-		secondaryOwnerId: 'Secondary Owner 1',
-		projectId: 'P03',
-		groupId: 'G03',
-		documentId: 'D03',
-	},
-	{
-		id: 'R04',
-		name: 'Rule 4',
-		type: RuleType.MODIFIED,
-		status: RuleStatus.DONE,
-		ownerId: 'Owner 1',
-		hasQa: true,
-		qaUserId: 'QA User 1',
-		secondaryOwnerId: 'Secondary Owner 1',
-		projectId: 'P01',
-		groupId: 'G02',
-		documentId: 'D02',
 	},
 ];

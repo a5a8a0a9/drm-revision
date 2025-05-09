@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, DestroyRef, EventEmitter, Output } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
-import { Document } from '../../shared/model';
+import { Document } from '@api/model';
 import { HamburgerComponent } from '../hamburger/hamburger.component';
 import { LayoutService } from '../layout.service';
 import { documentLst, groupList, projectList } from './mock.const';
