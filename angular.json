@@ -109,11 +109,19 @@
 						"styles": ["src/styles.scss"],
 						"scripts": []
 					}
+				},
+				"deploy": {
+					"builder": "angular-cli-ghpages:deploy",
+					"options": {
+						"baseHref": "/drm-revision/",
+						"name": "young",
+						"email": "stupid80096@gmal.com"
+					}
 				}
 			}
 		}
-  },
-  "cli": {
-    "analytics": false
-  }
+	},
+	"cli": {
+		"analytics": false
+	}
 }
