@@ -24,9 +24,9 @@
       "dom"
     ],
 		"paths": {
-      "@layout": ["src/app/layout/index.ts"],
+      "@api/*": ["src/app/api/*"],
       "@component": ["src/app/component/index.ts"],
-      "@shared/*": ["src/app/shared/*"],
+      "@layout": ["src/app/layout/index.ts"],
       "@feature/*": ["src/app/feature/*"],
 		}
   },

@@ -1,5 +1,5 @@
-import { RuleStatus, RuleType } from '@shared/enum';
-import { Rule } from '@shared/model';
+import { RuleStatus, RuleType } from '@api/enum';
+import { Rule } from '@api/model';
 
 export const MOCK_RULE_LIST: Rule[] = Array.from({ length: 100 }, (_, index) => ({
 	id: `rule-${index}`,

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Rule } from '@api/model';
 import { TableComponent } from '@component';
-import { Rule } from '@shared/model';
 import { COLUMN_LIST } from './column.const';
 import { MOCK_RULE_LIST } from './mock.const';
 

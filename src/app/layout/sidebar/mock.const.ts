@@ -1,4 +1,4 @@
-import { Document, Group, Project } from '@shared/model';
+import { Document, Group, Project } from '@api/model';
 
 export const groupList: Group[] = [
 	{
