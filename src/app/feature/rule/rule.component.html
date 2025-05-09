@@ -1,0 +1,32 @@
+<div style="display: flex; flex-direction: column">
+	<details style="border: 1px solid #ddd; border-radius: 4px">
+		<summary style="padding: 8px; cursor: pointer">Document 001</summary>
+		<div style="padding: 8px; border-top: 1px solid #ddd"></div>
+	</details>
+
+	<yee-table [data]="tableData" [columns]="tableColumnList">
+		<ng-template #header let-columns="columns">
+			<tr>
+				<th *ngFor="let col of columns; let i = index" [style.width.px]="col.width">
+					{{ col.header }}
+					<div class="resize-handle"></div>
+				</th>
+			</tr>
+		</ng-template>
+
+		<ng-template #row let-row="row" let-columns="columns">
+			<tr>
+				<td *ngFor="let col of columns" [style.width.px]="col.width">
+					{{ row[col.field] }}
+				</td>
+			</tr>
+		</ng-template>
+
+		<!-- 空資料範例 -->
+		<ng-template #noData let-columns="columns">
+			<tr>
+				<td [attr.colspan]="columns.length" class="no-data">暫無資料</td>
+			</tr>
+		</ng-template>
+	</yee-table>
+</div>

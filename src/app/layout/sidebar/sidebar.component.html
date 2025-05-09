@@ -1,5 +1,8 @@
 <div class="yee-sidebar" [class.active]="isOpen">
-	<div class="yee-sidebar-header" style="display: grid; grid-template-columns: max-content 1fr; align-items: center">
+	<div
+		class="yee-sidebar-header"
+		style="display: grid; grid-template-columns: max-content 1fr; align-items: center; border-bottom: 1px solid #ddd"
+	>
 		<div style="padding: 8px">
 			<yee-hamburger></yee-hamburger>
 		</div>
@@ -33,7 +36,7 @@
 
 					<div *ngIf="isOpen" style="margin-left: 16px">
 						<div *ngFor="let document of documentLst; let documentIndex = index" class="menu">
-							<div class="menu-item">
+							<div class="menu-item" (click)="selectDocument(group.id, project.id, document.id)">
 								<div class="menu-header">
 									<i class="menu-icon">&spades;</i>
 									<span class="truncate">

@@ -24,8 +24,10 @@
       "dom"
     ],
 		"paths": {
-			"@layout": ["src/app/layout/index.ts"],
-			"@shared*": ["src/app/shared/*"],
+      "@layout": ["src/app/layout/index.ts"],
+      "@component": ["src/app/component/index.ts"],
+      "@shared/*": ["src/app/shared/*"],
+      "@feature/*": ["src/app/feature/*"],
 		}
   },
   "angularCompilerOptions": {

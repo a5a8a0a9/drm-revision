@@ -1,6 +1,6 @@
 .yee-sidebar {
 	display: grid;
-	background: $color-bg-light;
+	background: #fff;
 	border-right: 1px solid $color-border;
 	overflow: hidden;
 	grid-template-rows: max-content 1fr;
@@ -13,7 +13,6 @@
 	}
 
 	&-header {
-		background: $color-accent;
 	}
 
 	&-body {
