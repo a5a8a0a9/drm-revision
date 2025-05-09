@@ -1,6 +1,8 @@
-export interface Tab {
-	id: string;
-	title: string;
-	content: string;
-	selected: boolean;
+export interface TabItem {
+	label: string;
+	path: string;
+	icon?: string;
+	badge?: number;
+	disabled?: boolean;
+	closable?: boolean;
 }

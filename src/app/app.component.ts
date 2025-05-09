@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
-import { SidebarComponent, TabComponent } from '@layout';
-import { Tab } from '@shared/model';
+import { TabComponent } from '@component';
+import { SidebarComponent } from '@layout';
+import { TabItem } from '@shared/model';
 
 @Component({
 	selector: 'yee-root',
@@ -11,80 +12,25 @@ import { Tab } from '@shared/model';
 	styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-	tabList: Tab[] = [
-		{
-			id: 'tab1',
-			title: 'tab1',
-			content: 'tab1',
-			selected: true,
-		},
-		{
-			id: 'tab2',
-			title: 'tab2',
-			content: 'tab2',
-			selected: true,
-		},
-		{
-			id: 'tab3',
-			title: 'tab3',
-			content: 'tab3',
-			selected: true,
-		},
-		{
-			id: 'tab4',
-			title: 'tab4',
-			content: 'tab4',
-			selected: true,
-		},
-		{
-			id: 'tab5',
-			title: 'tab5',
-			content: 'tab5',
-			selected: true,
-		},
-		{
-			id: 'tab6',
-			title: 'tab6',
-			content: 'tab6',
-			selected: true,
-		},
-		{
-			id: 'tab7',
-			title: 'tab7',
-			content: 'tab7',
-			selected: true,
-		},
-		{
-			id: 'tab8',
-			title: 'tab8',
-			content: 'tab8',
-			selected: true,
-		},
-		{
-			id: 'tab9',
-			title: 'tab9',
-			content: 'tab9',
-			selected: true,
-		},
-		{
-			id: 'tab10',
-			title: 'tab10',
-			content: 'tab10',
-			selected: true,
-		},
-		{
-			id: 'tab11',
-			title: 'tab11',
-			content: 'tab11',
-			selected: true,
-		},
+	tabs: TabItem[] = [
+		{ label: 'Document_1', path: '/G1/P1/D1', closable: true },
+		{ label: 'Document_2', path: '/G1/P1/D2', closable: true },
+		{ label: 'Document_3', path: '/G1/P1/D3', closable: true },
+		{ label: 'Document_4', path: '/G1/P1/D4', closable: true },
+		{ label: 'Document_5', path: '/G1/P1/D5', closable: true },
+		{ label: 'Document_6', path: '/G1/P1/D6', closable: true },
+		{ label: 'Document_7', path: '/G1/P1/D7', closable: true },
+		{ label: 'Document_8', path: '/G1/P1/D8', closable: true },
+		{ label: 'Document_9', path: '/G1/P1/D9', closable: true },
+		{ label: 'Document_10', path: '/G1/P1/D10', closable: true },
+		{ label: 'Document_11', path: '/G1/P1/D11', closable: true },
+		{ label: 'Document_12', path: '/G1/P1/D12', closable: true },
+		{ label: 'Document_13', path: '/G1/P1/D13', closable: true },
+		{ label: 'Document_14', path: '/G1/P1/D14', closable: true },
+		{ label: 'Document_15', path: '/G1/P1/D15', closable: true },
 	];
-
-	activeTabId: string = 'tab1';
 
 	constructor(private router: Router) {}
 
-	ngOnInit() {
-		this.activeTabId = this.tabList[0].id;
-	}
+	ngOnInit() {}
 }
