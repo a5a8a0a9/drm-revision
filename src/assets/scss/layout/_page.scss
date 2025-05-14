@@ -1,8 +1,14 @@
 .page-layout {
 	display: grid;
+	grid-template-rows: max-content 1fr;
 	grid-template-columns: max-content 1fr;
 	height: 100%;
 	overflow: hidden;
+}
+
+#page-header {
+	grid-column: 1 / -1;
+	grid-row: 1;
 }
 
 #page-sidebar {
