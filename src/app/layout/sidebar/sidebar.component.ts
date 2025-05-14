@@ -35,7 +35,7 @@ export class SidebarComponent {
 		this.layoutService.toggleMenu();
 	}
 
-	selectDocument(groupId: string, projectId: string, documentId: string) {
-		this.router.navigate([groupId, projectId, documentId]);
+	selectDocument(documentId: string) {
+		this.router.navigate([documentId]);
 	}
 }

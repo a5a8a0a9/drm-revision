@@ -71,7 +71,7 @@ export class TabComponent implements OnInit, AfterViewInit {
 	}
 
 	saveToStorage() {
-		localStorage.setItem(this.storageKey, JSON.stringify({ tabs: this.tabs, lastPath: this.router.url }));
+		// localStorage.setItem(this.storageKey, JSON.stringify({ tabs: this.tabs, lastPath: this.router.url }));
 	}
 
 	onDragStart(event: DragEvent, index: number) {
