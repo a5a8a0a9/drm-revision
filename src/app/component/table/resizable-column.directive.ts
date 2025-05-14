@@ -16,8 +16,6 @@ export class ResizableColumnDirective implements OnInit, OnDestroy {
 	constructor(private el: ElementRef, private renderer: Renderer2) {}
 
 	ngOnInit() {
-		// 保证宿主有 relative 定位
-		this.renderer.setStyle(this.el.nativeElement, 'position', 'relative');
 		// 建立 resize handle
 		this.handleEl = this.renderer.createElement('div');
 		this.renderer.addClass(this.handleEl, 'resize-handle');

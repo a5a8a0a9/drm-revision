@@ -19,6 +19,7 @@ table {
 		z-index: 1;
 
 		tr > th {
+			position: relative;
 			border-bottom: 1px solid $color-border;
 			border-right: 1px solid $color-border;
 			&:last-child {
@@ -29,9 +30,11 @@ table {
 
 	tbody {
 		tr > td {
-			border-bottom: 1px solid $color-border;
+			max-width: 0;
 
+			border-bottom: 1px solid $color-border;
 			border-right: 1px solid $color-border;
+
 			&:last-child {
 				border-right: none;
 			}
@@ -47,10 +50,6 @@ table {
 		position: relative;
 		padding: 8px;
 		white-space: nowrap;
-	}
-
-	th,
-	td {
 		background: #fff;
 	}
 
