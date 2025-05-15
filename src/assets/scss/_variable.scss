@@ -20,3 +20,17 @@ $color-active: #bac2cb; // 按下/選取背景
 $color-success: #88b04b;
 $color-warning: #e5a00d;
 $color-error: #d6454a;
+
+// 斷點定義（響應式）
+// xs: 手機直立；sm: 手機橫置；md: 平板；lg: 桌機小螢幕；xl: 桌機大螢幕
+$breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+);
+
+// 預設欄數與間距
+$grid-columns: 12 !default;
+$grid-gap: 1rem !default;

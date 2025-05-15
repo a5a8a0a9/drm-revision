@@ -1,0 +1,50 @@
+// Grid 容器基礎 class
+.grid {
+	display: grid;
+	grid-template-columns: repeat($grid-columns, 1fr);
+	gap: $grid-gap;
+}
+
+// 動態產生「欄位數」調整 class
+// 例如：<div class="grid grid-cols-8">... </div>
+@for $i from 1 through $grid-columns {
+	.grid-cols-#{$i} {
+		grid-template-columns: repeat(#{$i}, 1fr);
+	}
+}
+
+// 動態產生「佔幾欄」class
+// 例如：<div class="col-span-4">... </div>
+@for $i from 1 through $grid-columns {
+	.col-span-#{$i} {
+		grid-column: span #{$i};
+	}
+}
+
+// 7. 動態產生各斷點下的「欄位數」class
+// 例如：<div class="sm-grid-cols-6 md-grid-cols-12">...
+@each $bp, $size in $breakpoints {
+	@if $bp != xs {
+		@for $i from 1 through $grid-columns {
+			.#{$bp}-grid-cols-#{$i} {
+				@include respond-to($bp) {
+					grid-template-columns: repeat(#{$i}, 1fr);
+				}
+			}
+		}
+	}
+}
+
+// 8. 動態產生各斷點下的「佔幾欄」class
+//    例如：<div class="sm-col-span-6 lg-col-span-3">...
+@each $bp, $size in $breakpoints {
+	@if $bp != xs {
+		@for $i from 1 through $grid-columns {
+			.#{$bp}-col-span-#{$i} {
+				@include respond-to($bp) {
+					grid-column: span #{$i};
+				}
+			}
+		}
+	}
+}
