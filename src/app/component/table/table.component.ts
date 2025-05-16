@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, ContentChild, ElementRef, Input, Renderer2, TemplateRef, ViewChild } from '@angular/core';
+import { ColumnConfig } from '@api/model/column.model';
 
 @Component({
 	selector: 'yee-table',
@@ -10,7 +11,7 @@ import { Component, ContentChild, ElementRef, Input, Renderer2, TemplateRef, Vie
 })
 export class TableComponent {
 	@Input() data: any[] = [];
-	@Input() columns: { field: string; header: string; width: number }[] = [];
+	@Input() columns: ColumnConfig[] = [];
 
 	@ViewChild('tableContainer') tableContainer!: ElementRef;
 

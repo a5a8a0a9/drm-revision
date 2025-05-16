@@ -10,10 +10,10 @@ export const MOCK_RULE_LIST: Rule[] = Array.from({ length: 20 }, (_, index) => (
 	description: `This is a description for rule-${index}`,
 	type: index % 2 ? RuleType.NEW : RuleType.MODIFIED,
 	status: index % 2 ? RuleStatus.DOING : RuleStatus.DONE,
-	ownerId: 'owner_1',
+	ownerId: null,
 	hasQa: false,
-	qaUserId: 'qa_1',
-	secondaryOwnerId: 'owner_2',
+	qaUserId: null,
+	secondaryOwnerId: null,
 }));
 
 export const MOCK_USER_LIST = Array.from({ length: 20 }, (_, index) => ({

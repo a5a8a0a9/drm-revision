@@ -1,9 +1,8 @@
-.input {
-	width: 100%;
+.button {
 	border: 1px solid $color-border;
 	border-radius: 4px;
+	background: #fff;
 	padding: 4px 8px;
 	font-size: 14px;
-	line-height: 1;
-	outline: none;
+	display: inline-block;
 }
