@@ -25,16 +25,50 @@
 				<tr>
 					<td *ngFor="let col of columns">
 						<ng-container [ngSwitch]="col.field">
+							<ng-container *ngSwitchCase="'name'">
+								<input [(ngModel)]="row.name" type="text" class="input" />
+							</ng-container>
+
 							<ng-container *ngSwitchCase="'type'">
+								<yee-dropdown [(ngModel)]="row.type" [items]="RULE_TYPE_LIST"></yee-dropdown>
+							</ng-container>
+
+							<ng-container *ngSwitchCase="'status'">
+								<yee-dropdown [(ngModel)]="row.status" [items]="RULE_STATUS_LIST"></yee-dropdown>
+							</ng-container>
+
+							<ng-container *ngSwitchCase="'ownerId'">
 								<yee-dropdown
-									[(ngModel)]="row.type"
-									[items]="[
-										{ label: '我是選項一哦', value: RuleType.NEW },
-										{ label: '我是選項二啦', value: RuleType.MODIFIED }
-									]"
-									[placeholder]="'請選擇'"
+									[(ngModel)]="row.ownerId"
+									[items]="USER_LIST"
+									labelKey="name"
+									valueKey="id"
 								></yee-dropdown>
 							</ng-container>
+
+							<ng-container *ngSwitchCase="'qaUser'">
+								<div style="display: flex; align-items: center">
+									<input [(ngModel)]="row.hasQa" type="checkbox" />
+
+									<yee-dropdown
+										[(ngModel)]="row.qaUserId"
+										[items]="USER_LIST"
+										labelKey="name"
+										valueKey="id"
+										style="flex: 1 0 0"
+									></yee-dropdown>
+								</div>
+							</ng-container>
+
+							<ng-container *ngSwitchCase="'secondaryOwnerId'">
+								<yee-dropdown
+									[(ngModel)]="row.secondaryOwnerId"
+									[items]="USER_LIST"
+									labelKey="name"
+									valueKey="id"
+								></yee-dropdown>
+							</ng-container>
+
 							<ng-container *ngSwitchDefault>
 								{{ row[col.field] }}
 							</ng-container>

@@ -15,7 +15,7 @@
 		</div>
 		<ul class="yee-dropdown-list">
 			<li *ngFor="let item of filteredItems" class="yee-dropdown-item" (click)="onSelect(item)">
-				{{ item.label }}
+				{{ item[labelKey] }}
 			</li>
 			<li *ngIf="!filteredItems.length" class="yee-dropdown-empty">無匹配項</li>
 		</ul>

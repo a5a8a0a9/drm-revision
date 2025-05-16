@@ -11,11 +11,6 @@ import {
 } from '@angular/core';
 import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 
-export interface DropdownItem {
-	label: string;
-	value: any;
-}
-
 @Component({
 	selector: 'yee-dropdown',
 	standalone: true,
@@ -31,14 +26,16 @@ export interface DropdownItem {
 	],
 })
 export class DropdownComponent implements OnInit, AfterViewInit, ControlValueAccessor {
-	@Input() items: DropdownItem[] = [];
+	@Input() items: any[] = [];
 	@Input() placeholder = '請選擇';
+	@Input() labelKey = 'label';
+	@Input() valueKey = 'value';
 
 	@ViewChild('searchInput', { static: false })
 	searchInput!: ElementRef<HTMLInputElement>;
 
 	filterControl = new FormControl('');
-	filteredItems: DropdownItem[] = [];
+	filteredItems: any[] = [];
 	panelOpen = false;
 
 	// FormControl 相關
@@ -48,8 +45,8 @@ export class DropdownComponent implements OnInit, AfterViewInit, ControlValueAcc
 
 	selectedValue: string | null = null;
 	get selectedLabel(): string | null {
-		const found = this.items.find(item => item.value === this.selectedValue);
-		return found ? found.label : null;
+		const found = this.items.find(item => item[this.valueKey] === this.selectedValue);
+		return found ? found[this.labelKey] : null;
 	}
 
 	constructor(private elementRef: ElementRef) {}
@@ -59,7 +56,7 @@ export class DropdownComponent implements OnInit, AfterViewInit, ControlValueAcc
 
 		this.filterControl.valueChanges.subscribe(term => {
 			const keyword = (term || '').toLowerCase();
-			this.filteredItems = this.items.filter(item => item.label.toLowerCase().includes(keyword));
+			this.filteredItems = this.items.filter(item => item[this.labelKey].toLowerCase().includes(keyword));
 		});
 	}
 
@@ -96,9 +93,9 @@ export class DropdownComponent implements OnInit, AfterViewInit, ControlValueAcc
 		this.onTouched();
 	}
 
-	onSelect(item: DropdownItem) {
-		this.selectedValue = item.value;
-		this.onChange(item.value);
+	onSelect(item: any) {
+		this.selectedValue = item[this.valueKey];
+		this.onChange(item[this.valueKey]);
 		this.closePanel();
 	}
 
