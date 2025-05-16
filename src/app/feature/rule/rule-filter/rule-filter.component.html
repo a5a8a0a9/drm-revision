@@ -1,0 +1,95 @@
+<form [formGroup]="form" class="grid" style="gap: 8px">
+	<div class="col-12 col-md-3">
+		<input formControlName="name" type="text" placeholder="rule name" class="input" />
+	</div>
+
+	<div class="col-12 col-md-9">
+		<input formControlName="description" type="text" placeholder="rule description" class="input" />
+	</div>
+
+	<div class="col-12 col-md-3">
+		<yee-dropdown
+			formControlName="ownerId"
+			[items]="USER_LIST"
+			labelKey="name"
+			valueKey="id"
+			placeholder="ownerId"
+		></yee-dropdown>
+	</div>
+
+	<div class="col-12 col-md-3">
+		<yee-dropdown
+			formControlName="secondaryOwnerId"
+			[items]="USER_LIST"
+			labelKey="name"
+			valueKey="id"
+			placeholder="secondaryOwnerId"
+		></yee-dropdown>
+	</div>
+
+	<div class="col-12 col-md-3">
+		<yee-dropdown
+			formControlName="editorId"
+			[items]="USER_LIST"
+			labelKey="name"
+			valueKey="id"
+			placeholder="editorId"
+		></yee-dropdown>
+	</div>
+
+	<div class="col-12 col-md-3">
+		<yee-dropdown
+			formControlName="secondaryEditorId"
+			[items]="USER_LIST"
+			labelKey="name"
+			valueKey="id"
+			placeholder="secondaryEditorId"
+		></yee-dropdown>
+	</div>
+
+	<div class="col-12 col-md-3">
+		<yee-dropdown
+			formControlName="qaEditorId"
+			[items]="USER_LIST"
+			labelKey="name"
+			valueKey="id"
+			placeholder="qaEditorId"
+		></yee-dropdown>
+	</div>
+
+	<div class="col-12 col-md-3">
+		<yee-dropdown
+			formControlName="secondaryQaEditorId"
+			[items]="USER_LIST"
+			labelKey="name"
+			valueKey="id"
+			placeholder="secondaryQaEditorId"
+		></yee-dropdown>
+	</div>
+
+	<div class="col-12 col-md-3">
+		<yee-dropdown
+			formControlName="reviewerId"
+			[items]="USER_LIST"
+			labelKey="name"
+			valueKey="id"
+			placeholder="reviewerId"
+		></yee-dropdown>
+	</div>
+
+	<div class="col-12 col-md-3">
+		<yee-dropdown formControlName="type" [items]="RULE_TYPE_LIST" placeholder="type"></yee-dropdown>
+	</div>
+
+	<div class="col-12 col-md-3">
+		<yee-dropdown formControlName="status" [items]="RULE_STATUS_LIST" placeholder="status"></yee-dropdown>
+	</div>
+
+	<div class="col-12 col-md-3">
+		<yee-dropdown
+			formControlName="secondaryStatus"
+			[items]="RULE_STATUS_LIST"
+			placeholder="secondaryStatus"
+		></yee-dropdown>
+	</div>
+</form>
