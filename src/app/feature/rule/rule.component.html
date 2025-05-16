@@ -2,24 +2,90 @@
 	<details style="border-bottom: 1px solid #ddd">
 		<summary style="padding: 8px; cursor: pointer">Document 001</summary>
 
-		<div style="padding: 8px; border-top: 1px solid #ddd"></div>
+		<div style="padding: 8px; border-top: 1px solid #ddd">
+			<yee-rule-filter />
+		</div>
 	</details>
 
 	<div style="height: 100%; overflow: auto; position: relative">
 		<yee-table [data]="tableData" [columns]="tableColumnList" style="height: 100%">
 			<ng-template #header let-columns="columns">
 				<tr>
-					<th *ngFor="let col of columns; let i = index" [style.width.px]="col.width" yeeResizableColumn [column]="col">
+					<th
+						*ngFor="let col of columns; let colIndex = index"
+						yeeResizableColumn
+						[column]="col"
+						[style.width.px]="col.width"
+						[style.textAlign]="col.align"
+						class="truncate"
+						[ngClass]="col.thStyleClass"
+						[ngStyle]="col.thStyle"
+					>
 						{{ col.header }}
-						<div class="resize-handle"></div>
 					</th>
 				</tr>
 			</ng-template>
 
 			<ng-template #row let-row="row" let-columns="columns">
 				<tr>
-					<td *ngFor="let col of columns" [style.minWidth.px]="col.width">
-						{{ row[col.field] }}
+					<td
+						*ngFor="let col of columns"
+						[style.textAlign]="col.align"
+						[ngClass]="col.tdStyleClass"
+						[ngStyle]="col.tdStyle"
+					>
+						<ng-container [ngSwitch]="col.field">
+							<ng-container *ngSwitchCase="'action'">
+								<button class="button" style="color: #519cdb">Edit</button>
+							</ng-container>
+							<ng-container *ngSwitchCase="'name'">
+								<input [(ngModel)]="row.name" type="text" class="input" />
+							</ng-container>
+
+							<ng-container *ngSwitchCase="'type'">
+								<yee-dropdown [(ngModel)]="row.type" [items]="RULE_TYPE_LIST"></yee-dropdown>
+							</ng-container>
+
+							<ng-container *ngSwitchCase="'status'">
+								<yee-dropdown [(ngModel)]="row.status" [items]="RULE_STATUS_LIST"></yee-dropdown>
+							</ng-container>
+
+							<ng-container *ngSwitchCase="'ownerId'">
+								<yee-dropdown
+									[(ngModel)]="row.ownerId"
+									[items]="USER_LIST"
+									labelKey="name"
+									valueKey="id"
+								></yee-dropdown>
+							</ng-container>
+
+							<ng-container *ngSwitchCase="'qaUser'">
+								<div style="display: flex; align-items: center">
+									<input [(ngModel)]="row.hasQa" type="checkbox" />
+
+									<yee-dropdown
+										[(ngModel)]="row.qaUserId"
+										[items]="USER_LIST"
+										labelKey="name"
+										valueKey="id"
+										style="flex: 1 0 0"
+									></yee-dropdown>
+								</div>
+							</ng-container>
+
+							<ng-container *ngSwitchCase="'secondaryOwnerId'">
+								<yee-dropdown
+									[(ngModel)]="row.secondaryOwnerId"
+									[items]="USER_LIST"
+									labelKey="name"
+									valueKey="id"
+								></yee-dropdown>
+							</ng-container>
+
+							<ng-container *ngSwitchDefault>
+								{{ row[col.field] }}
+							</ng-container>
+						</ng-container>
 					</td>
 				</tr>
 			</ng-template>

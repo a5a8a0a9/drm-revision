@@ -20,3 +20,7 @@ $color-active: #bac2cb; // 按下/選取背景
 $color-success: #88b04b;
 $color-warning: #e5a00d;
 $color-error: #d6454a;
+
+// 預設欄數與間距
+$grid-columns: 12 !default;
+$grid-gap: 1rem !default;
