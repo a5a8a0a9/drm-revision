@@ -1,5 +1,4 @@
 <div class="yee-dropdown-wrapper">
-	<!-- 触发区域 -->
 	<div
 		class="yee-dropdown-toggle"
 		tabindex="0"
@@ -7,10 +6,9 @@
 		[class.disabled]="disabled"
 		(focus)="onToggleFocus()"
 	>
-		<ng-container>{{ selectedLabel || placeholder }}</ng-container>
+		<span>{{ selectedLabel || placeholder }}</span>
 	</div>
 
-	<!-- 下拉面板 -->
 	<div *ngIf="panelOpen" class="yee-dropdown-panel">
 		<div class="yee-dropdown-search">
 			<input #searchInput type="text" class="input" placeholder="搜尋..." [formControl]="filterControl" />

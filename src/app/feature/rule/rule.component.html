@@ -10,7 +10,7 @@
 			<ng-template #header let-columns="columns">
 				<tr>
 					<th
-						*ngFor="let col of columns; let i = index"
+						*ngFor="let col of columns; let colIndex = index"
 						yeeResizableColumn
 						[column]="col"
 						[style.width.px]="col.width"
