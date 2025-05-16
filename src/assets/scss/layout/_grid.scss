@@ -21,12 +21,12 @@
 	}
 }
 
-// 7. 動態產生各斷點下的「欄位數」class
-// 例如：<div class="sm-grid-cols-6 md-grid-cols-12">...
+// 動態產生各斷點下的「欄位數」class
+// 例如：<div class="grid-cols-sm-6 grid-cols-md-12">...
 @each $bp, $size in $breakpoints {
 	@if $bp != xs {
 		@for $i from 1 through $grid-columns {
-			.#{$bp}-grid-cols-#{$i} {
+			.grid-cols-#{$bp}-#{$i} {
 				@include respond-to($bp) {
 					grid-template-columns: repeat(#{$i}, 1fr);
 				}
@@ -35,12 +35,12 @@
 	}
 }
 
-// 8. 動態產生各斷點下的「佔幾欄」class
-//    例如：<div class="sm-col-span-6 lg-col-span-3">...
+// 動態產生各斷點下的「佔幾欄」class
+// 例如：<div class="sm-col-span-6 lg-col-span-3">...
 @each $bp, $size in $breakpoints {
 	@if $bp != xs {
 		@for $i from 1 through $grid-columns {
-			.#{$bp}-col-span-#{$i} {
+			.col-span-#{$bp}-#{$i} {
 				@include respond-to($bp) {
 					grid-column: span #{$i};
 				}
