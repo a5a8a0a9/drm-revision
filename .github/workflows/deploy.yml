@@ -4,15 +4,19 @@
 name: Deploy
 
 on:
-  push:
-    branches: ['master']
+  pull_request:
+    branches:
+      - master
+    types:
+      - closed
 
 permissions:
   contents: write
   pages: write
 
 jobs:
-  build:
+  if_merged:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     strategy:
