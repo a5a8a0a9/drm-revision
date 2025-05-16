@@ -4,7 +4,7 @@
 	// border: 1px solid $color-border;
 	// border-radius: 4px;
 	height: 100%;
-	background: $color-bg-lightest;
+	background: #fff;
 }
 
 table {
@@ -16,9 +16,10 @@ table {
 	thead {
 		position: sticky;
 		top: 0;
-		z-index: 1;
+		z-index: map-get($zindexs, thead);
 
 		tr > th {
+			position: relative;
 			border-bottom: 1px solid $color-border;
 			border-right: 1px solid $color-border;
 			&:last-child {
@@ -29,9 +30,12 @@ table {
 
 	tbody {
 		tr > td {
-			border-bottom: 1px solid $color-border;
+			max-width: 0;
+			align-content: center;
 
+			border-bottom: 1px solid $color-border;
 			border-right: 1px solid $color-border;
+
 			&:last-child {
 				border-right: none;
 			}
@@ -47,11 +51,12 @@ table {
 		position: relative;
 		padding: 8px;
 		white-space: nowrap;
-	}
-
-	th,
-	td {
 		background: #fff;
+
+		&.sticky-cell {
+			position: sticky;
+			z-index: map-get($zindexs, sticky-cell);
+		}
 	}
 
 	.resize-handle {

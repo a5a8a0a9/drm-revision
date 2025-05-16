@@ -9,8 +9,8 @@ export interface Rule {
 	description: string;
 	type: RuleType;
 	status: RuleStatus;
-	ownerId: string;
+	ownerId: string | null;
 	hasQa: boolean;
-	qaUserId: string;
-	secondaryOwnerId: string;
+	qaUserId: string | null;
+	secondaryOwnerId: string | null;
 }

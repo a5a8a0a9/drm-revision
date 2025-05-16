@@ -1,0 +1,10 @@
+// 響應式 Mixin
+// 參數：斷點名稱（必須存在於 $breakpoints）
+@mixin respond-to($breakpoint) {
+	$min: map-get($breakpoints, $breakpoint);
+	@if $min != null {
+		@media (min-width: $min) {
+			@content;
+		}
+	}
+}

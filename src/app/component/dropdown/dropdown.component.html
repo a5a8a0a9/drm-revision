@@ -1,0 +1,23 @@
+<div class="yee-dropdown-wrapper">
+	<div
+		class="yee-dropdown-toggle"
+		tabindex="0"
+		[class.placeholder]="selectedValue == null"
+		[class.disabled]="disabled"
+		(focus)="onToggleFocus()"
+	>
+		<span>{{ selectedLabel || placeholder }}</span>
+	</div>
+
+	<div *ngIf="panelOpen" class="yee-dropdown-panel">
+		<div class="yee-dropdown-search">
+			<input #searchInput type="text" class="input" placeholder="搜尋..." [formControl]="filterControl" />
+		</div>
+		<ul class="yee-dropdown-list">
+			<li *ngFor="let item of filteredItems" class="yee-dropdown-item" (click)="onSelect(item)">
+				{{ item[labelKey] }}
+			</li>
+			<li *ngIf="!filteredItems.length" class="yee-dropdown-empty">無匹配項</li>
+		</ul>
+	</div>
+</div>

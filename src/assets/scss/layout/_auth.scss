@@ -1,0 +1,27 @@
+.auth-layout {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+
+	&-container {
+		max-width: 350px;
+		width: 100%;
+		margin: auto;
+		background-color: $color-bg-light;
+		border-radius: 20px;
+		border: 1px solid $color-border;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	}
+	&-header {
+		padding: 16px;
+		font-weight: bolder;
+		text-align: center;
+		border-bottom: 1px solid $color-border;
+	}
+	&-content {
+		padding: 16px;
+	}
+}
