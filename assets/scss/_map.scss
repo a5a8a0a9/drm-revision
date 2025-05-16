@@ -1,0 +1,15 @@
+// 斷點定義（響應式）
+// xs: 手機直立；sm: 手機橫置；md: 平板；lg: 桌機小螢幕；xl: 桌機大螢幕
+$breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+);
+
+$zindexs: (
+	sticky-cell: 10,
+	thead: 11,
+	dropdown: 100,
+);

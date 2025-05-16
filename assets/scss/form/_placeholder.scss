@@ -1,0 +1,15 @@
+.placeholder {
+	color: $color-text-placeholder;
+}
+::-webkit-input-placeholder {
+	color: $color-text-placeholder;
+}
+:-moz-placeholder {
+	color: $color-text-placeholder;
+}
+::-moz-placeholder {
+	color: $color-text-placeholder;
+}
+:-ms-input-placeholder {
+	color: $color-text-placeholder;
+}
